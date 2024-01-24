@@ -1,34 +1,37 @@
 import Image from 'next/image'
+import Navbar from './Components/Navbar'
+import HomeHero from './Components/HomeHero'
+import Blurb from './Components/Blurb'
+import { BeakerIcon, BriefcaseIcon, DocumentTextIcon } from '@heroicons/react/24/outline'
 
 export default function Home() {
+  
   return (
     <>
-    <header className="home-header bg-indigo-900">
-      <div className="container mx-auto bg-primary">
-        <div className="flex flex-col sm:flex-row gap-16 items-center">
-          <div className="flex-initial w-96 p-5">
-            <h1>Welcome!</h1>
-            <p>This is my site</p>
-          </div>
-          <div className="">
-            <img src="/me.png" width="400px"></img>
-          </div>
-        </div>   
-      </div>
-
-    </header>
+    <HomeHero />
+    <Navbar />
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+    <div className="container mx-auto p-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <Blurb
+          icon={<BeakerIcon />}
+          headline="My Experience"
+          url="/experience"
         />
+        <Blurb
+          icon={<BriefcaseIcon />}
+          headline="My Resume"
+          url="/resume"
+        />
+        <Blurb
+          icon={<DocumentTextIcon />}
+          headline="Portfolio"
+          url="/portfolio"
+        />
+        {/* Add more `Blurb` components as needed */}
       </div>
+    </div>
 
       <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
         <a
