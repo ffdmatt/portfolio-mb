@@ -1,19 +1,19 @@
 import React from 'react';
-import WeatherApp from '../Components/WeatherApp';
+import Navbar from '../Components/Navbar';
 
-const WeatherPage: React.FC = () => {
-    const apiKey = process.env.REACT_APP_WEATHER_API_KEY;
-
-    if (!apiKey) {
-        return <p>Invalid or missing API key. Please check again.</p>
-    }
+const AppsPage: React.FC = () => {
 
     return (
+        <>
+        <Navbar />
         <div>
-            <h1>Weather Information</h1>
-            <WeatherApp apiKey={apiKey} />
+            <h1>These are my apps!</h1>
+            <ul>
+                <li><a href="/apps/weather">Weather App</a></li>
+            </ul>
         </div>
+        </>
     )
 };
 
-export default WeatherPage;
+export default AppsPage;

@@ -52,7 +52,7 @@ const WeatherApp: React.FC<Props> = ({ apiKey }) => {
   if (error) return <div>{error}</div>;
 
   return (
-    <div>
+    <div className="bg-slate-200 p-5 rounded text-slate-700 dark:bg-slate-700 dark:text-slate-200 justify-self-center" >
       {weatherData && (
         <div>
           <h2>

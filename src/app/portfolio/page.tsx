@@ -1,10 +1,10 @@
 import Navbar from "../Components/Navbar"
 
-export default function About() {
+export default function Portfolio() {
     return (
     <>
         <Navbar />
-        <h1>About us</h1>
+        <h1>Portfolio Page</h1>
     </>
     )
 }
