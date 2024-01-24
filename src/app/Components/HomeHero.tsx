@@ -3,7 +3,7 @@ import LinkButton from "./LinkButton";
 
 const HomeHero: React.FC = () => {
   return (
-    <header className="home-header bg-indigo-900">
+    <header className="home-header bg-slate-900 text-white dark:text-white">
       <div className="container mx-auto">
         <div className="flex flex-col sm:flex-row gap-16 items-center relative py-28">
           <div className="flex-initial md:w-2/3 lg:w-3/6 p-5 flex flex-col gap-16">

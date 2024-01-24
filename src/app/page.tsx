@@ -6,6 +6,7 @@ import {
   BeakerIcon,
   BriefcaseIcon,
   DocumentTextIcon,
+  CommandLineIcon,
 } from "@heroicons/react/24/outline";
 
 const blurbNav = [
@@ -35,6 +36,11 @@ const blurbNav = [
     href: "/recent",
     icon: <DocumentTextIcon className="w-12" />,
   },
+  {
+    name: "React Apps",
+    href: "/apps",
+    icon: <CommandLineIcon className="w-12" />,
+  },
 ];
 
 export default function Home() {
@@ -43,15 +49,16 @@ export default function Home() {
       <HomeHero />
       <Navbar />
       <main className="flex min-h-screen flex-col items-center justify-between">
-        <div className="w-full bg-blue-400 py-24 text-blue-900">
+        <div className="w-full bg-blue-100 py-24 text-blue-900">
           <div className="container mx-auto p-4">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {blurbNav.map((item) => (
                 <Blurb
                   key={item.name}
                   icon={item.icon}
                   headline={item.name}
                   url={item.href}
+                  className="border-slate-300 bg-slate-100"
                 />
               ))}
             </div>
