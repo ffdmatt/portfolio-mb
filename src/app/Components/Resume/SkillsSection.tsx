@@ -7,13 +7,15 @@ type Props = {
 
 const ExperienceSection: React.FC<Props> = ({ skills }) => {
     return (
-        <section>
+        <section className="grid gap-3">
             <h2>Skills</h2>
+            <div className="grid gap-2">
             {skills.map((skill, idx) => (
                 <article key={idx}>
                     <h5>{skill.name} - {skill.level}</h5>
                 </article>
             ))}
+            </div>
         </section>
     )
 }

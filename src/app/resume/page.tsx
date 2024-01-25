@@ -4,6 +4,7 @@ import ExperienceSection from "../Components/Resume/ExperienceSection";
 import EducationSection from "../Components/Resume/EducationSection";
 import SkillsSection from "../Components/Resume/SkillsSection";
 import { ResumeData } from "../Types/ResumeTypes";
+import AnimatedSection from "../Components/AnimatedSection";
 
 const resumeData: ResumeData = {
   fullName: "Matt Brevetti",
@@ -55,16 +56,26 @@ const ResumePage: React.FC = () => {
       <Navbar />
       <main className="flex min-h-screen flex-col items-center justify-between">
         <div className="w-full bg-blue-100 py-24 text-blue-900">
-          <div className="container mx-auto">
-            <header>
-              <h1>{resumeData.fullName}</h1>
-              <h2>Resume</h2>
-              <p>{resumeData.title}</p>
-              <p>{resumeData.summary}</p>
-            </header>
-            <ExperienceSection experiences={resumeData.experiences} />
-            <EducationSection schools={resumeData.education} />
-            <SkillsSection skills={resumeData.skills} />
+          <div className="container mx-auto grid gap-5">
+            <AnimatedSection>
+              <header className="grid gap-3">
+                <h1>Resume</h1>
+                <div className="grid gap-1">
+                  <h2 className="text-3xl">{resumeData.fullName}</h2>
+                  <p>{resumeData.title}</p>
+                  <p>{resumeData.summary}</p>
+                </div>
+              </header>
+            </AnimatedSection>
+            <AnimatedSection>
+              <ExperienceSection experiences={resumeData.experiences} />
+            </AnimatedSection>
+            <AnimatedSection>
+              <EducationSection schools={resumeData.education} />
+            </AnimatedSection>
+            <AnimatedSection>
+              <SkillsSection skills={resumeData.skills} />
+            </AnimatedSection>
           </div>
         </div>
       </main>
