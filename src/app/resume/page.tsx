@@ -141,7 +141,7 @@ const ResumePage: React.FC = () => {
     <>
       <Navbar />
       <main className="flex min-h-screen flex-col items-center justify-between">
-        <div className="w-full bg-blue-100 py-24 text-blue-900">
+        <div className="w-full bg-gray-200 py-24 text-blue-900">
           <div className="container mx-auto grid gap-5">
             <header className="grid gap-3">
               <h1>Resume</h1>
