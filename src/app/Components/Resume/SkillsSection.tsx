@@ -1,23 +1,30 @@
 import React from "react";
-import { Skill } from "@/app/Types/ResumeTypes";
+import { SkillGroup } from "@/app/Types/ResumeTypes";
 
 type Props = {
-    skills: Skill[];
+  skillGroups: SkillGroup[];
 };
 
-const ExperienceSection: React.FC<Props> = ({ skills }) => {
-    return (
-        <section className="grid gap-3">
-            <h2>Skills</h2>
-            <div className="grid gap-2">
-            {skills.map((skill, idx) => (
-                <article key={idx}>
-                    <h5>{skill.name} - {skill.level}</h5>
-                </article>
-            ))}
+const ExperienceSection: React.FC<Props> = ({ skillGroups }) => {
+  return (
+    <section className="grid gap-3">
+        <h2>Skills</h2>
+        <div className="grid gap-2">
+          {skillGroups.map((group, groupIdx) => (
+            <div key={groupIdx}>
+              <h3>{group.groupName}</h3>
+              <ul>
+                {group.skills.map((skill, skillIdx) => (
+                  <li key={skillIdx}>
+                    {skill.name} ({skill.level})
+                  </li>
+                ))}
+              </ul>
             </div>
-        </section>
-    )
-}
+          ))}
+        </div>
+    </section>
+  );
+};
 
-export default ExperienceSection
+export default ExperienceSection;

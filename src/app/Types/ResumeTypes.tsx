@@ -18,6 +18,11 @@ export type Experience = {
     name: string;
     level: string; // Beginner, Intermediate, Expert
   };
+
+  export type SkillGroup = {
+    groupName: string;
+    skills: Skill[];
+  }
   
   export type ResumeData = {
     fullName: string;
@@ -25,6 +30,6 @@ export type Experience = {
     summary: string;
     experiences: Experience[];
     education: Education[];
-    skills: Skill[];
+    skillGroups: SkillGroup[];
   };
   

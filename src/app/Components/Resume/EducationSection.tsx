@@ -5,7 +5,7 @@ type Props = {
     schools: Education[];
 };
 
-const ExperienceSection: React.FC<Props> = ({ schools }) => {
+const EducationSection: React.FC<Props> = ({ schools }) => {
     return (
         <section className="grid gap-3">
             <h2>Education</h2>
@@ -19,4 +19,4 @@ const ExperienceSection: React.FC<Props> = ({ schools }) => {
     )
 }
 
-export default ExperienceSection
+export default EducationSection
