@@ -141,7 +141,7 @@ const ResumePage: React.FC = () => {
     <>
       <Navbar />
       <main className="flex min-h-screen flex-col items-center justify-between">
-        <div className="w-full bg-gray-200 py-24 text-blue-900">
+        <div className="w-full bg-gray-100 dark:bg-gray-800 py-24 text-gray-700 dark:text-gray-200">
           <div className="container mx-auto grid gap-5">
             <header className="grid gap-3">
               <h1>Resume</h1>
@@ -151,15 +151,23 @@ const ResumePage: React.FC = () => {
                 <p>{resumeData.summary}</p>
               </div>
             </header>
+            <div className="grid grid-rows-12 grid-flow-row md:grid-flow-col gap-4">
+              <div className="row-span-full col-span-2">
             <AnimatedSection staggerChildren>
               <ExperienceSection experiences={resumeData.experiences} />
             </AnimatedSection>
+            </div>
+            <div className="col-span-2 md:col-span-1 row-span-1">
             <AnimatedSection staggerChildren>
               <EducationSection schools={resumeData.education} />
             </AnimatedSection>
+            </div>
+            <div className="col-span-2 md:col-span-1 row-span-6">
             <AnimatedSection staggerChildren>
               <SkillsSection skillGroups={resumeData.skillGroups} />
             </AnimatedSection>
+            </div>
+            </div>
           </div>
         </div>
       </main>

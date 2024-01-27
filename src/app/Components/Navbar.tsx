@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import DarkModeToggle from "./DarkModeToggle";
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -27,6 +28,7 @@ const Navbar: React.FC = () => {
               {item.name}
             </Link>
           ))}
+          <DarkModeToggle />
         </div>
       </div>
     </nav>

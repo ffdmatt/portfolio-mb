@@ -49,7 +49,7 @@ export default function Home() {
       <HomeHero />
       <Navbar />
       <main className="flex min-h-screen flex-col items-center justify-between">
-        <div className="w-full bg-blue-100 py-24 text-blue-900">
+        <div className="w-full bg-blue-100 dark:bg-slate-950 py-24 text-blue-900 dark:text-blue-200">
           <div className="container mx-auto p-4">
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {blurbNav.map((item) => (
@@ -58,7 +58,7 @@ export default function Home() {
                   icon={item.icon}
                   headline={item.name}
                   url={item.href}
-                  className="border-slate-300 bg-slate-100"
+                  className="border-slate-300 dark:border-slate-900 bg-slate-100 dark:bg-slate-800 dark:text-blue-200"
                 />
               ))}
             </div>
