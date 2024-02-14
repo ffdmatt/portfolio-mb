@@ -5,13 +5,14 @@ import DarkModeToggle from "./DarkModeToggle";
 const navigation = [
   { name: "Home", href: "/" },
   { name: "Portfolio", href: "/portfolio" },
+  { name: "Resume" , href: "/resume"},
   { name: "About", href: "/about" },
   { name: "Contact", href: "/contact" },
 ];
 
 const Navbar: React.FC = () => {
   return (
-    <nav id="nav-main" className="bg-gray-800 text-white shadow-lg">
+    <nav id="nav-main" className="bg-gray-800 text-white shadow-lg sticky top-0 z-10">
       <div className="container mx-auto px-4 py-5 flex justify-between items-center">
         <div className="flex items-center">
           <Link href="/" className="text-xl font-bold">

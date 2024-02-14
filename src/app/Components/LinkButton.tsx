@@ -8,7 +8,7 @@ type LinkButtonProps = {
 }
 
 const LinkButton: React.FC<LinkButtonProps> = ({children, url, className}) => {
-  const baseStyles = 'bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition ease-in duration-200';
+  const baseStyles = 'bg-blue-500 dark:bg-indigo-500 hover:bg-blue-700 dark:hover:bg-indigo-700 text-white dark:text-slate-100 font-bold py-2 px-4 rounded transition ease-in duration-200';
 
   return (
     <Link href={url} className={`${baseStyles} ${className}`}>
