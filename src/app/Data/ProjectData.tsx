@@ -5,28 +5,28 @@ export const projects: Project[] = [
         id: 1,
         title: 'In-House Marketing Transition',
         skills: ['Marketing Strategy'],
-        industries: ['Autism Services'],
+        industries: ['Autism Services', 'Healthcare'],
         description: 'Transitioned all marketing operations from an external agency to in-house, reducing costs and expanding census across centers.'
     },
     {
         id: 2,
         title: 'Center Expansion Support',
         skills: ['Digital Marketing', 'In-Person Marketing'],
-        industries: ['Autism Services'],
+        industries: ['Autism Services', 'Healthcare'],
         description: 'Assisted in launching new centers and enhanced census growth through innovative campaigns.'
     },
     {
         id: 3,
         title: 'Community Engagement Initiative',
         skills: ['Marketing Management', 'Marketing Strategy'],
-        industries: ['Autism Services'],
+        industries: ['Autism Services', 'Healthcare'],
         description: 'Implemented strategies to increase monthly patient referrals by over 400% and added new referring clinicians.'
     },
     {
         id: 4,
         title: 'Custom Tool Development',
         skills: ['Web Development', 'Javascript', 'PHP'],
-        industries: ['Autism Services'],
+        industries: ['Autism Services', 'Healthcare'],
         description: 'Developed bespoke tools for specific business challenges.'
     },
     {
@@ -98,5 +98,19 @@ export const projects: Project[] = [
         skills: ['Advertising'],
         industries: ['Construction', 'Industrial Services'],
         description: 'Developed a turn-key, effective strategy for marketing a paint services company through a mix of traditional and rich media.'
+    },
+    {
+        id: 15,
+        title: 'Sales Volume and Mix Campaigns',
+        skills: ['Advertising', 'Digital Marketing'],
+        industries: ['Autism Services', 'Healthcare'],
+        description: 'Worked with finance and enrollment to craft targeted advertising strategies that promoted healthy census growth among different products.'
+    },
+    {
+        id: 16,
+        title: 'Pilot Campaigns',
+        skills: ['Advertising', 'Digital Marketing'],
+        industries: ['Autism Services', 'Healthcare'],
+        description: 'Tested new services and/or markets with efficient, data-driven pilot campaigns to help forecast future growth.'
     },
 ]
