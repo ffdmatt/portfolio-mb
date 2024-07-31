@@ -10,7 +10,7 @@ const ProjectCard: React.FC<Props> = ({ project }) => {
   return (
     <Link
       href={`/projects/${project.id}`}
-      className="flex flex-col gap-2 p-4 text-slate-600 bg-white rounded-lg shadow-lg hover:bg-gray-100"
+      className="flex flex-col gap-2 p-4 text-slate-600 bg-white dark:bg-slate-800 dark:text-blue-200 rounded-lg shadow-lg hover:bg-gray-200 dark:hover:bg-slate-900"
     >
       <h3 className="text-xl font-bold">{project.title}</h3>
       <div className="flex flex-wrap gap-1">
@@ -35,7 +35,7 @@ const ProjectCard: React.FC<Props> = ({ project }) => {
           </span>
         ))}
       </div>
-      <p className="=text-gray-700">{project.description}</p>
+      <p className="text-gray-700 dark:text-blue-100">{project.description}</p>
     </Link>
   );
 };
